@@ -25,12 +25,14 @@
 @implementation FirstViewController
 
 - (IBAction)onTapLeftImage:(UITapGestureRecognizer *)sender {
-    int index = sender.view.tag;
+    //TODO: why there is an offset of 4 ????????
+    int index = sender.view.tag - 4;
     RTMovie* movie = self.movieArray[index];
     
     NSLog(@"---- tapped on photo --- ");
     RTDetailViewController *detailController = [self.storyboard instantiateViewControllerWithIdentifier:@"RTDetailViewController"];
     [detailController setMovie:movie];
+    
     [self presentViewController:detailController animated:YES completion:nil];
 }
 

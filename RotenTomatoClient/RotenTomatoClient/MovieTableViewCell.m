@@ -32,13 +32,13 @@
     
     if(left < [list count]) {
         RTMovie* movie = list[left];
-        [self.imageViewLeft setImageWithURL:[NSURL URLWithString:movie.posterUrl]];
+        [self.imageViewLeft setImageWithURL:[NSURL URLWithString:movie.posterHDUrl]];
         self.titleLeft.text = movie.title;
     }
     
     if(right < [list count]) {
         RTMovie* movie = list[right];
-        [self.imageViewRight setImageWithURL:[NSURL URLWithString:movie.posterUrl]];
+        [self.imageViewRight setImageWithURL:[NSURL URLWithString:movie.posterHDUrl]];
         self.titleRight.text = movie.title;
     }
 }

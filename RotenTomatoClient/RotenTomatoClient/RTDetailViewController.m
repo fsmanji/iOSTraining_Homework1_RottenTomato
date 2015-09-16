@@ -20,7 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(Back)];
+    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationItem.title = self.movie.title;
+
+    
     [self updateUI];
+}
+
+- (IBAction)Back
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

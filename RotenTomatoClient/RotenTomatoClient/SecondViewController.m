@@ -99,7 +99,7 @@
     RTMovie* movie1 = self.movieArray[row];
      cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)",movie1.title, movie1.year];
 
-     [cell.imageView setImageWithURL:[NSURL URLWithString:movie1.posterUrl]];
+     [cell.imageView setImageWithURL:[NSURL URLWithString:movie1.posterHDUrl]];
     return cell;
     
 }
