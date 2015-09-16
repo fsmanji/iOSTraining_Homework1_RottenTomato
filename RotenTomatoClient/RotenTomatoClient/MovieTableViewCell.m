@@ -23,6 +23,10 @@
 }
 
 -(void) initWithMovieLeft:(RTMovie *)movieLeft andMovieRight:(RTMovie *)movieRight {
+    //first reset previous image
+    self.imageViewLeft.image = nil;
+    self.imageViewRight.image = nil;
+    
     if(movieLeft) {
         [self.imageViewLeft setImageWithURL:[NSURL URLWithString:movieLeft.posterUrl]];
         self.titleLeft.text = movieLeft.title;

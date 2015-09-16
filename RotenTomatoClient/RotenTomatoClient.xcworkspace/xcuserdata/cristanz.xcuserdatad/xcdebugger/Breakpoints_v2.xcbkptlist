@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RotenTomatoClient/FirstViewController.m"
-            timestampString = "464066897.931425"
+            timestampString = "464070707.976099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-sendRequest"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,13 +42,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RotenTomatoClient/MovieTableViewCell.m"
-            timestampString = "464067572.703393"
+            timestampString = "464070707.976099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-initWithMovieLeft:andMovieRight:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RotenTomatoClient/MovieTableViewCell.h"
+            timestampString = "464068397.846152"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

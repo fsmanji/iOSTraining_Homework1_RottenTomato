@@ -32,7 +32,7 @@
     self.navigationItem.titleView.backgroundColor = [UIColor redColor];
     
     //setup table view
-    [self.tableView setRowHeight:320];
+    [self.tableView setRowHeight:220];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     
@@ -41,11 +41,15 @@
     [self.refreshControl addTarget:self action:@selector(onPullToRefresh) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
     
+    //self.tableView.estimatedRowHeight = 100;
+    //self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     //load movie list
     [self sendRequest];
 }
 
 -(void)onPullToRefresh {
+    [self.movieArray removeAllObjects];
     [self sendRequest];
 }
 
@@ -84,7 +88,7 @@
 //Table view datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSInteger count = [self.movieArray count];
-    return count;
+    return count / 2 + count % 2;
 }
 
 - (UITableViewCell* )tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -129,6 +133,7 @@
         [self.tableView reloadData];
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [self.refreshControl endRefreshing];
     }];
   
 }
