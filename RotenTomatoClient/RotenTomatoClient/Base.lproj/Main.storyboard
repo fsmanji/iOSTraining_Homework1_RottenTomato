@@ -29,7 +29,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="215"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XSq-xp-VES">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XSq-xp-VES">
                                                     <rect key="frame" x="8" y="0.0" width="150" height="168"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
                                                     <gestureRecognizers/>
@@ -37,9 +37,13 @@
                                                         <outletCollection property="gestureRecognizers" destination="4kN-iJ-nhd" appends="YES" id="AoV-Md-zmW"/>
                                                     </connections>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fJU-qA-Scd">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fJU-qA-Scd">
                                                     <rect key="frame" x="163" y="0.0" width="150" height="168"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="S8q-vx-WrG" appends="YES" id="sCk-td-V4K"/>
+                                                    </connections>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Ry-H5-fu8">
                                                     <rect key="frame" x="10" y="176" width="160" height="31"/>
@@ -76,9 +80,41 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="4kN-iJ-nhd"/>
+                <tapGestureRecognizer id="4kN-iJ-nhd">
+                    <connections>
+                        <action selector="onTapLeftImage:" destination="9pv-A4-QxB" id="fJh-Su-Nvd"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="S8q-vx-WrG">
+                    <connections>
+                        <action selector="onTapLeftImage:" destination="9pv-A4-QxB" id="qFT-4g-vD4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="931" y="-304"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Avm-tF-rjI">
+            <objects>
+                <viewController storyboardIdentifier="RTDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HPt-hN-nT3" customClass="RTDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0iu-YJ-WAj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="TqK-ca-u3K">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="TqK-ca-u3K" id="5Pq-Ux-iim"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vLc-3C-vAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="-303"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="wg7-f3-ORb">

@@ -17,6 +17,5 @@
 
 @property RTMovie* movie;
 
--(void) initWithMovieLeft:(RTMovie *)movieLeft andMovieRight:(RTMovie *)movieRight;
-
+-(void) initWithMovie:(NSArray *)list leftIndex:(NSInteger)left rightIndex:(NSInteger)right;
 @end

@@ -19,6 +19,7 @@
 		B3FEFBEA1BA8DE7C00973E70 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FEFBE91BA8DE7C00973E70 /* MovieTableViewCell.m */; };
 		B3FEFBED1BA8E25300973E70 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FEFBEC1BA8E25300973E70 /* Constants.m */; };
 		B3FEFBF01BA8E5F700973E70 /* RTMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FEFBEF1BA8E5F700973E70 /* RTMovie.m */; };
+		B3FEFBF31BA935B400973E70 /* RTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FEFBF21BA935B400973E70 /* RTDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		B3FEFBEC1BA8E25300973E70 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		B3FEFBEE1BA8E5F700973E70 /* RTMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTMovie.h; sourceTree = "<group>"; };
 		B3FEFBEF1BA8E5F700973E70 /* RTMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTMovie.m; sourceTree = "<group>"; };
+		B3FEFBF11BA935B400973E70 /* RTDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDetailViewController.h; sourceTree = "<group>"; };
+		B3FEFBF21BA935B400973E70 /* RTDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDetailViewController.m; sourceTree = "<group>"; };
 		C41348B71167A9822D21EC9A /* libPods-RotenTomatoClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RotenTomatoClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +129,8 @@
 				B3FEFBC91BA8DA1B00973E70 /* SecondViewController.h */,
 				B3FEFBCA1BA8DA1B00973E70 /* SecondViewController.m */,
 				B3FEFBCC1BA8DA1B00973E70 /* Main.storyboard */,
+				B3FEFBF11BA935B400973E70 /* RTDetailViewController.h */,
+				B3FEFBF21BA935B400973E70 /* RTDetailViewController.m */,
 				B3FEFBCF1BA8DA1B00973E70 /* Images.xcassets */,
 				B3FEFBD11BA8DA1B00973E70 /* LaunchScreen.xib */,
 				B3FEFBBF1BA8DA1B00973E70 /* Supporting Files */,
@@ -301,6 +306,7 @@
 				B3FEFBF01BA8E5F700973E70 /* RTMovie.m in Sources */,
 				B3FEFBCB1BA8DA1B00973E70 /* SecondViewController.m in Sources */,
 				B3FEFBC51BA8DA1B00973E70 /* AppDelegate.m in Sources */,
+				B3FEFBF31BA935B400973E70 /* RTDetailViewController.m in Sources */,
 				B3FEFBC81BA8DA1B00973E70 /* FirstViewController.m in Sources */,
 				B3FEFBEA1BA8DE7C00973E70 /* MovieTableViewCell.m in Sources */,
 				B3FEFBC21BA8DA1B00973E70 /* main.m in Sources */,

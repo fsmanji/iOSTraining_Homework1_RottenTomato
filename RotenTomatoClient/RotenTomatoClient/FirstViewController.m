@@ -12,6 +12,7 @@
 #import "Constants.h"
 #import "RTMovie.h"
 #import "MBProgressHUD.h"
+#import "RTDetailViewController.h"
 
 @interface FirstViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -22,6 +23,19 @@
 @end
 
 @implementation FirstViewController
+
+- (IBAction)onTapLeftImage:(UITapGestureRecognizer *)sender {
+    int index = sender.view.tag;
+    RTMovie* movie = self.movieArray[index];
+    
+    NSLog(@"---- tapped on photo --- ");
+    RTDetailViewController *detailController = [self.storyboard instantiateViewControllerWithIdentifier:@"RTDetailViewController"];
+    [detailController setMovie:movie];
+    [self presentViewController:detailController animated:YES completion:nil];
+}
+
+- (IBAction)onTapRightImage:(UITapGestureRecognizer *)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -94,12 +108,8 @@
 - (UITableViewCell* )tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MovieTableViewCell* cell = [self.tableView dequeueReusableCellWithIdentifier:@"com.yahoo.moviecell" forIndexPath:indexPath];
     int index = indexPath.row *2;
-    RTMovie* movie1 = self.movieArray[index];
-    RTMovie* movie2;
-    if(index + 1 < [self.movieArray count]) {
-        movie2 = self.movieArray[index + 1];
-    }
-    [cell initWithMovieLeft:movie1 andMovieRight:movie2];
+
+    [cell initWithMovie:self.movieArray leftIndex:index rightIndex:index+1];
     /*UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
     NSInteger row = indexPath.row;
     

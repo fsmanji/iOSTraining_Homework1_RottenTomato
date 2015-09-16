@@ -22,19 +22,24 @@
     // Configure the view for the selected state
 }
 
--(void) initWithMovieLeft:(RTMovie *)movieLeft andMovieRight:(RTMovie *)movieRight {
+-(void) initWithMovie:(NSArray *)list leftIndex:(NSInteger)left rightIndex:(NSInteger)right {
     //first reset previous image
     self.imageViewLeft.image = nil;
     self.imageViewRight.image = nil;
     
-    if(movieLeft) {
-        [self.imageViewLeft setImageWithURL:[NSURL URLWithString:movieLeft.posterUrl]];
-        self.titleLeft.text = movieLeft.title;
+    self.imageViewLeft.tag = left;
+    self.imageViewRight.tag = right;
+    
+    if(left < [list count]) {
+        RTMovie* movie = list[left];
+        [self.imageViewLeft setImageWithURL:[NSURL URLWithString:movie.posterUrl]];
+        self.titleLeft.text = movie.title;
     }
     
-    if(movieRight) {
-        [self.imageViewRight setImageWithURL:[NSURL URLWithString:movieRight.posterUrl]];
-        self.titleRight.text = movieRight.title;
+    if(right < [list count]) {
+        RTMovie* movie = list[right];
+        [self.imageViewRight setImageWithURL:[NSURL URLWithString:movie.posterUrl]];
+        self.titleRight.text = movie.title;
     }
 }
 
