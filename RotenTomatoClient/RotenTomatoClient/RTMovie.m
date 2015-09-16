@@ -26,7 +26,7 @@
     
     NSRange range = [self.posterUrl rangeOfString:@".*cloudfront.net/" options:NSRegularExpressionSearch];
     if (range.location != NSNotFound) {
-        self.posterUrl = [self.posterUrl stringByReplacingCharactersInRange:range withString:@"https://content6.flixster.com/"];
+        self.posterHDUrl = [self.posterUrl stringByReplacingCharactersInRange:range withString:@"https://content6.flixster.com/"];
     }
     
     NSLog(@"title=%@\n\tyear=%@\n\turl=%@\n\tdescription=%@\n\t", self.title,

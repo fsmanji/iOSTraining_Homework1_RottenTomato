@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *year;
 @property (nonatomic, strong) NSString *synopsis;
 @property (nonatomic, strong) NSString *posterUrl;
+@property (nonatomic, strong) NSString *posterHDUrl;
+
 @property NSInteger scoreAudience;//user's scores
 @property NSInteger scoreCritics;//how refresh the movie
 
